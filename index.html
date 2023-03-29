@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Rick_and_Morty.svg.png">
+    <title>api rich and morty</title>
+</head>
+<body>
+    <div class="img-principal">
+    <img src="Rick_and_Morty.svg.png" alt="" srcset="">
+</div>
+    <!-- Pagina -->
+    <select name="pagina" id="pagina" onchange="apiRick(this.value)">
+    <script>
+        for (let i = 1; i <=42; i++) { 
+            document.write(`<option value="${i}">${i}</option>`);
+        }
+    </script>
+    </select>
+    <!-- Resultado que traemos de la Api -->
+    <div id="resultado">
+    </div>
+   
+    
+    <script src="index.js"></script>
+</body>
+</html>
