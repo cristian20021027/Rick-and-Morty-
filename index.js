@@ -8,14 +8,34 @@ const apiRick=async (pagina)=>{
     data.results.map(item=>{ 
         divItem=document.createElement('div')
         divItem.innerHTML=`
-        <div class="card">
-        <img src="${item.image}" class="card-image">
-        <div class="category"> 
-        <h2>${item.name}</h2></div>
-        <div class="heading"><p><b>Especie: </b>${item.species}</p>
-            <div class="author"><span class="name"><b>Estado: </b>${item.status}</span></div>
+        
+<div class="card">
+<div class="infos">
+    <div class="image">
+        <img class="image" src="${item.image}"  alt="" >
+    </div>
+    <div class="info">
+        <div>
+            <p class="name">
+                ${item.name}
+            </p>
+            <p class="function">
+                ${item.status}
+            </p>
+        </div>
+        <div class="stats">
+                <p class="flex flex-col">
+                    ${item.species}
+                </p>
+                
         </div>
     </div>
+</div>
+<p class="request" >
+        ${item.origin.name}
+    </p>
+</div>
+
 `
 divRes.appendChild(divItem);
     });
