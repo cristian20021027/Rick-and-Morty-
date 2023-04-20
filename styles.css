@@ -1,3 +1,10 @@
+@font-face {
+
+  font-family: rickandmorty;
+  
+  src: url(get_schwifty.ttf);
+  
+  }
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +13,7 @@
 body{
   /* text-align: center; */
   /* margin: 50px; */
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background: rgb(33, 44, 59);
   background-blend-mode: multiply;
 
 }
@@ -28,12 +35,19 @@ body{
 }
 .contenedor-header header .logo{
   font-family: 'Righteous', cursive;
-  justify-content: space-around;
+  display: flex;
   color: #1ca4b6; 
   text-decoration:none;
 }
+.contenedor-header header  .logo a{
+  padding:10px 0;
+  font-family: rickandmorty;
+    font-size: 36px;
+    color: #00de64;
+    text-decoration:none;
+}
 .contenedor-header header .logo img{
-  width: 110px;
+  width: 130px;
   filter: hue-rotate(69deg) brightness(1000%);
 }
 
@@ -52,8 +66,7 @@ body{
 .contenedor-header header nav ul li a:hover{
   color: #00de64;
 }
-
-.contenedor-header header .input {
+/* .contenedor-header header .input {
   background-color: #F4F4F4;
   border: none;
   border-radius: 10px;
@@ -71,6 +84,38 @@ body{
   -moz-appearance: none;
   appearance: none;
   transition: background-color 0.3s ease-in-out;
+} */
+.input {
+  color: white;
+  max-width: auto;
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
+  outline: none;
+  border-color: #00de64;
+}
+
+.input-group:hover .label, .input:focus {
+  color: #05060fc2;
+}
+.contenedor-header header .search i{
+  color: #00de64;
 }
 
 .contenedor-header header .input:focus {
@@ -172,7 +217,7 @@ body{
 }
 
 .function {
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1rem;
   color: rgba(156, 163, 175, 1);
 }
@@ -218,4 +263,30 @@ body{
 .request:hover {
   background-color: rgb(36, 194, 120);
   color: #fff;
+}
+.function.alive {
+  height: auto;
+  width: 26%;
+  text-align: center;
+  border-radius: 3px;
+  background-color: rgb(36, 194, 120) ;
+  color: white;
+}
+
+.function.dead {
+  height: auto;
+  width: 26%;
+  text-align: center;
+  border-radius: 3px;
+  background-color: rgb(199, 48, 48);
+  color: white;
+}
+
+.function.unknown {
+  height: auto;
+  width: 45%;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #242424;
+  color: white;
 }

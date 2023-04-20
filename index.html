@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="Rick_and_Morty.svg.png">
+    <link rel="shortcut icon" href="pngwing.com (1).png">
     <title>api rich and morty</title>
 </head>
 <setion>
@@ -14,6 +14,7 @@
         <header>
             <div class="logo">
                 <img src="/logo_low.png" alt="">
+                <a href="#">Rick and Morty</a>
             </div>
             <nav id="nav">
                 <ul>
@@ -23,8 +24,8 @@
                 </ul>
             </nav>
             <div class="search">
+                <input class="input" type="text" id="filtro" placeholder="Filtrar por nombre o letra">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="text" class="input" placeholder="Search">
             </div>
         </header>
     </div>
@@ -42,7 +43,6 @@
     </select>
 </div>
     <!-- Resultado que traemos de la Api -->
-    
     <div id="resultado">
     </div>    
     
